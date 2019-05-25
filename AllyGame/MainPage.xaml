@@ -9,6 +9,159 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="3*"/>
+    </Grid.ColumnDefinitions>
 
+    <Grid Grid.Column="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0"
+                        Orientation="Vertical"
+                        Margin="10,10,10,10">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{x:Bind NameList[0]}"/>
+                <Button Name="Attack"
+                            Click="Attack_Click"
+                            Content="攻击"
+                            Tag="{x:Bind NameList[0] }"
+                            IsEnabled="{x:Bind ButtonEnable[0]}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox Name="GetInWar"
+                              Checked="GetInWar_Checked"
+                              Unchecked="GetInWar_Unchecked"
+                              Content="是否加入战团"
+                              Tag="{x:Bind NameList[0]}"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                        Orientation="Vertical"
+                        Margin="10,10,10,10">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{x:Bind NameList[1]}"/>
+                <Button 
+                            Click="Attack_Click"
+                            Content="攻击"
+                            Tag="{x:Bind NameList[1] }"
+                            IsEnabled="{x:Bind ButtonEnable[1]}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox 
+                              Checked="GetInWar_Checked"
+                              Unchecked="GetInWar_Unchecked"
+                              Content="是否加入战团"
+                              Tag="{x:Bind NameList[1]}"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2"
+                        Orientation="Vertical"
+                        Margin="10,10,10,10">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{x:Bind NameList[2]}"/>
+                <Button 
+                            Click="Attack_Click"
+                            Content="攻击"
+                            Tag="{x:Bind NameList[2] }"
+                            IsEnabled="{x:Bind ButtonEnable[2]}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox 
+                              Checked="GetInWar_Checked"
+                              Unchecked="GetInWar_Unchecked"
+                              Content="是否加入战团"
+                              Tag="{x:Bind NameList[2]}"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3"
+                        Orientation="Vertical"
+                        Margin="10,10,10,10">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{x:Bind NameList[3]}"/>
+                <Button 
+                            Click="Attack_Click"
+                            Content="攻击"
+                            Tag="{x:Bind NameList[3] }"
+                            IsEnabled="{x:Bind ButtonEnable[3]}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox 
+                              Checked="GetInWar_Checked"
+                              Unchecked="GetInWar_Unchecked"
+                              Content="是否加入战团"
+                              Tag="{x:Bind NameList[3]}"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4"
+                        Orientation="Vertical"
+                        Margin="10,10,10,10">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{x:Bind NameList[4]}"/>
+                <Button 
+                            Click="Attack_Click"
+                            Content="攻击"
+                            Tag="{x:Bind NameList[4] }"
+                            IsEnabled="{x:Bind ButtonEnable[4]}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox 
+                              Checked="GetInWar_Checked"
+                              Unchecked="GetInWar_Unchecked"
+                              Content="是否加入战团"
+                              Tag="{x:Bind NameList[4]}"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5"
+                        Orientation="Vertical"
+                        Margin="10,10,10,10">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{x:Bind NameList[5]}"/>
+                <Button
+                            Click="Attack_Click"
+                            Content="攻击"
+                            Tag="{x:Bind NameList[5] }"
+                            IsEnabled="{x:Bind ButtonEnable[5]}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox 
+                              Checked="GetInWar_Checked"
+                              Unchecked="GetInWar_Unchecked"
+                              Content="是否加入战团"
+                              Tag="{x:Bind NameList[5]}"/>
+            </StackPanel>
+        </StackPanel>
+
+
+    </Grid>
+
+    <StackPanel Grid.Column="1"
+                    Orientation="Vertical">
+        <TextBlock Text="战斗信息"
+                       FontSize="40"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+        <ScrollViewer IsVerticalScrollChainingEnabled="True"
+                          VerticalScrollMode="Enabled" 
+                          VerticalScrollBarVisibility="Visible"
+                          >
+            <TextBlock Text="{x:Bind TextOut,Mode=TwoWay}"
+                           FontSize="15"
+                           Margin="10,10,0,0"/>
+        </ScrollViewer>
+
+    </StackPanel>
     </Grid>
 </Page>
